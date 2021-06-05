@@ -1,4 +1,4 @@
-//package com.ltts;
+package com.ltts;
 
 import java.util.Scanner;
 import java.text.DecimalFormat;
@@ -39,22 +39,22 @@ class Square extends Shape
 public class ShapeMain {
 	public static void main(String[] args){
 		
-		Scanner input=new Scanner(System.in);
+		Scanner sc=new Scanner(System.in);
 		System.out.println("Circle \nSquare");
 		System.out.println("Enter the shape");
-		String type = input.next();
+		String type = sc.next();
 		Shape s;
 		if(type.equalsIgnoreCase("Circle"))
 		{
 			System.out.println("Enter the radius");
-			int radius = input.nextInt();
+			int radius = sc.nextInt();
 			s=new Circle();
 			System.out.println("Area of Circle:"+s.calculateArea(radius));
 		}
 		else
 		{
 			System.out.println("Enter the side");
-			int side = input.nextInt();
+			int side = sc.nextInt();
 			s=new Square();
 			System.out.println("Area of Circle:"+s.calculateArea(side));
 		}
