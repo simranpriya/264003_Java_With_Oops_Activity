@@ -1,4 +1,4 @@
-//package com.ltts;
+package com.ltts;
 
 import java.util.Scanner;
 
@@ -124,24 +124,24 @@ class FourWheeler extends Vehicle{
 
 public class VehicleMain {
 	public static void main(String[] args) {
-		Scanner input=new Scanner(System.in);
+		Scanner sc=new Scanner(System.in);
 		System.out.println("1.Four Wheeler\n2.Two Wheeler\nEnter Vehicle Type");
-		Integer vehicleType = input.nextInt();
+		Integer vehicleType = sc.nextInt();
 		System.out.println("Vehicle Make: ");
-                String make=input.next();
+                String make=sc.next();
 		System.out.println("Vehicle Number: ");
-		String vehicleNumber=input.next();
+		String vehicleNumber=sc.next();
 		System.out.println("Fuel Type: \n1.Petrol\n2.Diesel");
-		String fuelType=input.next();
+		String fuelType=sc.next();
 		System.out.println("Fuel Capacity: ");
-		Integer fuelCapacity=input.nextInt();
+		Integer fuelCapacity=sc.nextInt();
 		System.out.println("Engine CC: ");
-		Integer cc=input.nextInt();
+		Integer cc=sc.nextInt();
 		if(vehicleType==1){ 
 	              System.out.println("Audio System: ");
-		      String audioSystem=input.next();
+		      String audioSystem=sc.next();
 		      System.out.println("No of Doors: ");
-		      int noOfDoors= input.nextInt();
+		      int noOfDoors= sc.nextInt();
 		      FourWheeler f=new FourWheeler(make,vehicleNumber,fuelType,fuelCapacity,cc,audioSystem,noOfDoors);
 		      f.displayMake();
 		      f.displayBasicInfo();
@@ -149,7 +149,7 @@ public class VehicleMain {
 		}
 		else{
 		      System.out.println("Kick Start Available(yes/no): ");
-		      String kickStartAvailability=input.next();
+		      String kickStartAvailability=sc.next();
 		      TwoWheeler t=new TwoWheeler(make,vehicleNumber,fuelType,fuelCapacity,cc,kickStartAvailability);
 		      t.displayMake();
 		      t.displayBasicInfo();
