@@ -1,4 +1,4 @@
-//package com.ltts;
+package com.ltts;
 
 import java.util.Scanner;
 
@@ -102,8 +102,8 @@ class T20 extends Match{
 public class MatchMain {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner scan = new Scanner(System.in);
+		
+		Scanner sc = new Scanner(System.in);
 		int choice;
 		System.out.println("Enter the match format: ");
 		System.out.println("1. ODI");
@@ -111,13 +111,13 @@ public class MatchMain {
 		System.out.println("3. Test");
 		int currentScore, targetScore, balls;
 		float currentOver, runRate;
-		choice = scan.nextInt();
+		choice = sc.nextInt();
 		System.out.println("Enter the current Score: ");
-		currentScore = scan.nextInt();
+		currentScore = sc.nextInt();
 		System.out.println("Enter the current Over: ");
-		currentOver = scan.nextInt();
+		currentOver = sc.nextInt();
 		System.out.println("Enter the target Score: ");
-		targetScore = scan.nextInt();
+		targetScore = sc.nextInt();
 		switch(choice){
 		case 1:
 			ODIMatch om = new ODIMatch();
