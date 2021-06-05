@@ -1,4 +1,4 @@
-//package com.ltts;
+package com.ltts;
 
 import java.util.Scanner;
 
@@ -37,7 +37,7 @@ class DeluxeRoom extends HotelRoom{
 		return ratePerSqFeet;
 	}
 	public void calculateTariff(int ratePerSqFeet) {
-		// TODO Auto-generated method stub
+		
 		int cost = (numberOfSqFeet * ratePerSqFeet);
 		System.out.println(cost);
 		
@@ -77,8 +77,8 @@ class HotelMain
 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner scan = new Scanner(System.in);
+		
+		Scanner sc = new Scanner(System.in);
 		int choice, rate;
 		String tvchoice, wifichoice;
 		String hotelName;
@@ -88,20 +88,20 @@ class HotelMain
 		System.out.println("1. Deluxe Room ");
 		System.out.println("2. Deluxe AC Room ");
 		System.out.println("3. Suite AC Room ");
-		choice = scan.nextInt();
+		choice = sc.nextInt();
 		System.out.println("Hotel Name: ");
-		hotelName = scan.next();
+		hotelName = sc.next();
 		System.out.println("Room Square Feet Area: ");
-		numberOfSqFeet = scan.nextInt();
+		numberOfSqFeet = sc.nextInt();
 		System.out.println("Room Has TV (Yes/No): ");
-		tvchoice = scan.next();
+		tvchoice = sc.next();
 		if (tvchoice.equals("Yes")){
 			hasTV = true;
 		} else {
 			hasTV = false;
 		}
 		System.out.println("Room has Wifi (Yes/NO): ");
-		wifichoice = scan.next();
+		wifichoice = sc.next();
 		if(wifichoice.equals("Yes")){
 			hasWifi = true;
 		} else {
