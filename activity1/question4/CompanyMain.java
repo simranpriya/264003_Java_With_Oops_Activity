@@ -1,5 +1,4 @@
-
-//package com.ltts;
+package com.ltts;
 
 import java.util.Scanner;
 
